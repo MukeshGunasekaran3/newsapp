@@ -1,9 +1,5 @@
-// ignore_for_file: public_member_api_docs, sort_constructors_first
-import 'dart:convert';
-
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:shared_preferences/shared_preferences.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 import 'package:newsapp/provider/provider.dart';
@@ -107,7 +103,8 @@ class News_view extends StatelessWidget {
                       backgroundColor: MaterialStatePropertyAll(Colors.teal)),
                   onPressed: () async {
                     final Uri _url = Uri.parse(m["url"]);
-                    print("url launche =:${await launchUrl(_url)}");
+                    print(
+                        "url launche =:${await launchUrl(_url, mode: LaunchMode.externalApplication)}");
                   },
                   child: Text(
                     "view Source",
