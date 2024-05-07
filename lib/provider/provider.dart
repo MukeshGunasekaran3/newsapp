@@ -7,14 +7,13 @@ import 'package:shared_preferences/shared_preferences.dart';
 
 class Data extends ChangeNotifier {
   final BuildContext context;
-
   bool isloading = true;
-
   List article = [];
 
   Data(this.context) {
     get();
   }
+
   get() async {
     var response = await http.get(Uri.parse(
         "https://newsapi.org/v2/top-headlines?country=in&apiKey=0eac3fb62ca34249bc4e806025bee713"));
