@@ -104,7 +104,7 @@ class News_view extends StatelessWidget {
                   onPressed: () async {
                     final Uri _url = Uri.parse(m["url"]);
                     print(
-                        "url launche =:${await launchUrl(_url, mode: LaunchMode.externalApplication)}");
+                        "url launcher =:${await launchUrl(_url, mode: LaunchMode.externalApplication)}");
                   },
                   child: Text(
                     "view Source",
